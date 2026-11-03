@@ -1,6 +1,6 @@
 ---
 name: task-tracking
-description: Use when an authorized task must be found, registered, deduplicated, updated or closed in an existing tracker; confirm the real work state and saved item before acting.
+description: Register or update an authorized task in an existing tracker at intake, material progress, or closure; reconcile identity and verify saved state without creating a new tracking system.
 ---
 
 # Task tracking
@@ -9,9 +9,7 @@ Perform the tracker operation, not just advice about it. Use the current task's 
 
 ## Establish the operation
 
-If the work originated in Chat/Codex sessions, treat session IDs and model receipts as evidence for the stable work-item identity, not new tracker items. Verify whether the actual parent completed and the responsible reviewer accepted the result before closing an item; a child's `task_complete`, model claim or saved draft does not close its parent. Keep private raw traces and local paths out of public tracker updates.
-
-Read the user's actual outcome, current decision and existing task reference. Find the matching work item by stable identity and verified relationships. If no reference is supplied, search the authorized tracker before proposing creation. A repeated request, clarification or similarly titled item is not automatically a new task.
+Read the user's actual outcome, current decision and existing task reference. Find the matching work item by stable identity and verified relationships. If no reference is supplied, search the authorized tracker before proposing creation. A repeated request, clarification or similarly titled item is not automatically a new task. Execution sessions and model rounds are evidence attached to that identity, not independent work items.
 
 Read the destination's current schema and supported operations. Map its existing status values, parent relation and locations for outcome, owner, blocker, next action and evidence. Use ordinary body text for facts without custom fields; do not add schema. Use [the host-operation guide](references/host-operations.md) when the tool requires a concrete mapping.
 
