@@ -1,6 +1,6 @@
 ---
 name: task-tracking
-description: Register or update an authorized task in an existing tracker at intake, material progress, or closure; reconcile identity and verify saved state without creating a new tracking system.
+description: Use when an authorized task must be found, registered, deduplicated, updated or closed in an existing tracker; confirm the real work state and saved item before acting.
 ---
 
 # Task tracking
@@ -8,6 +8,8 @@ description: Register or update an authorized task in an existing tracker at int
 Perform the tracker operation, not just advice about it. Use the current task's authorized tools and destination. This skill grants no access, publication permission, or review authority. It works independently of other skills.
 
 ## Establish the operation
+
+If the work originated in Chat/Codex sessions, treat session IDs and model receipts as evidence for the stable work-item identity, not new tracker items. Verify whether the actual parent completed and the responsible reviewer accepted the result before closing an item; a child's `task_complete`, model claim or saved draft does not close its parent. Keep private raw traces and local paths out of public tracker updates.
 
 Read the user's actual outcome, current decision and existing task reference. Find the matching work item by stable identity and verified relationships. If no reference is supplied, search the authorized tracker before proposing creation. A repeated request, clarification or similarly titled item is not automatically a new task.
 
