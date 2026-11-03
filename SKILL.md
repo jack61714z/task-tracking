@@ -9,7 +9,7 @@ Perform the tracker operation, not just advice about it. Use the current task's 
 
 ## Establish the operation
 
-Read the user's actual outcome, current decision and existing task reference. Find the matching work item by stable identity and verified relationships. If no reference is supplied, search the authorized tracker before proposing creation. A repeated request, clarification or similarly titled item is not automatically a new task.
+Read the user's actual outcome, current decision and existing task reference. Find the matching work item by stable identity and verified relationships. If no reference is supplied, search the authorized tracker before proposing creation. A repeated request, clarification or similarly titled item is not automatically a new task. Execution sessions and model rounds are evidence attached to that identity, not independent work items.
 
 Read the destination's current schema and supported operations. Map its existing status values, parent relation and locations for outcome, owner, blocker, next action and evidence. Use ordinary body text for facts without custom fields; do not add schema. Use [the host-operation guide](references/host-operations.md) when the tool requires a concrete mapping.
 
